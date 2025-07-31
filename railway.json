@@ -4,19 +4,19 @@
     "nixpacksPlan": {
       "phases": {
         "install": {
-          "cmds": ["cd frontend && npm install"]
+          "cmds": ["cd frontend/vite-project && npm install"]
         },
         "build": {
-          "cmds": ["cd frontend && npm run build"]
+          "cmds": ["cd frontend/vite-project && npm run build"]
         },
         "start": {
-          "cmd": "cd frontend && npm run preview -- --port $PORT"
+          "cmd": "cd frontend/vite-project && npm run preview -- --port $PORT"
         }
       }
     }
   },
   "deploy": {
-    "startCommand": "cd frontend && npm run preview -- --port $PORT",
+    "startCommand": "cd frontend/vite-project && npm run preview -- --port $PORT",
     "healthcheckPath": "/",
     "restartPolicyType": "ON_FAILURE"
   }
