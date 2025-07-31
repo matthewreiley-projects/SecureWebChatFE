@@ -1,0 +1,97 @@
+.search-rooms-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f141a;
+  padding: 2rem;
+}
+
+.search-rooms-card {
+  background-color: #1a1f26;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 0 0 1px #2e2e2e, 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.search-rooms-card h2 {
+  text-align: center;
+  color: #e0e0e0;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.search-input {
+  width: 95%;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  background-color: #12161d;
+  border: 1px solid #2f2f2f;
+  border-radius: 6px;
+  color: #e0e0e0;
+  margin-bottom: 1.5rem;
+}
+
+.search-input::placeholder {
+  color: #888;
+}
+
+.rooms-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.room-item {
+  background-color: #12161d;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #2f2f2f;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #f1f1f1;
+}
+
+.room-item strong {
+  font-weight: 600;
+}
+
+.room-item small {
+  color: #888;
+}
+
+.status {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.status.member {
+  color: #7ed957;
+}
+
+.status.pending {
+  color: #f7b731;
+}
+
+.join-btn {
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.join-btn:hover {
+  background-color: #357abd;
+  transform: translateY(-1px);
+}

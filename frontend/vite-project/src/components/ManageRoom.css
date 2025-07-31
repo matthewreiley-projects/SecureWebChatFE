@@ -1,0 +1,101 @@
+.manage-room-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  background-color: #0f141a;
+}
+
+.manage-room-card {
+  background-color: #1a1f26;
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 0 0 1px #2e2e2e, 0 8px 16px rgba(0, 0, 0, 0.25);
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.manage-room-card h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: #f0f0f0;
+}
+
+.not-owner-msg {
+  color: #e74c3c;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.participant-list,
+.request-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.participant-item,
+.request-item {
+  background-color: #12161d;
+  border: 1px solid #2f2f2f;
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.participant-item strong {
+  font-weight: 700;
+  color: #c4bb45;
+}
+
+.kick-btn,
+.accept-btn,
+.deny-btn {
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  color: #e0e0e0;
+}
+
+.kick-btn {
+  background-color: #c4bb45;
+}
+
+.kick-btn:hover {
+  background-color: #a89e3a;
+  transform: translateY(-1px);
+}
+
+.accept-btn {
+  background-color: #4caf50;
+  margin-right: 0.6rem;
+}
+
+.accept-btn:hover {
+  background-color: #3a9e38;
+  transform: translateY(-1px);
+}
+
+.deny-btn {
+  background-color: #f44336;
+}
+
+.deny-btn:hover {
+  background-color: #c0392b;
+  transform: translateY(-1px);
+}

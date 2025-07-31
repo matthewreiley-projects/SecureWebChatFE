@@ -1,0 +1,128 @@
+.invites-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f141a;
+  padding: 2rem;
+}
+
+.invites-card {
+  background-color: #1a1f26;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 520px;
+  box-shadow: 0 0 0 1px #2e2e2e, 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.invites-card h1 {
+  font-size: 1.5rem;
+  color: #e0e0e0;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.invites-card h2 {
+  font-size: 1.1rem;
+  color: #cccccc;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.invites-message {
+  background-color: rgba(60, 179, 113, 0.1);
+  color: #9ae6b4;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.no-invites {
+  text-align: center;
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.invites-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.invite-item {
+  background-color: #12161d;
+  padding: 0.9rem 1rem;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  border: 1px solid #2f2f2f;
+  transition: background-color 0.2s ease;
+}
+
+.invite-item strong {
+  color: #f1f1f1;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.invite-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.accept-btn,
+.decline-btn {
+  font-size: 0.85rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.accept-btn {
+  background-color: #a0d911;
+  color: #0f0f0f;
+}
+
+.accept-btn:hover {
+  background-color: #8bc034;
+  transform: translateY(-1px);
+}
+
+.decline-btn {
+  background-color: #ff4d4f;
+  color: #fff;
+}
+
+.decline-btn:hover {
+  background-color: #d9363e;
+  transform: translateY(-1px);
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background-color: #101418;
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: #a0d911;
+}

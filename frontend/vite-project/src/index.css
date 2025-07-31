@@ -1,0 +1,126 @@
+/* Mint & Slate Theme Root */
+:root {
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+
+
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --accent-color: #ececec;
+  --accent-hover: #319795;
+  --secondary-text: #6b7280;
+  --card-bg: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.05);
+}
+
+/* Links */
+a {
+  font-weight: 500;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accent-hover);
+}
+
+/* Body */
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  color: #2f2f2f;
+}
+
+/* Headings */
+h1 {
+  font-size: 3em;
+  line-height: 1.1;
+  color: #2f2f2f;
+}
+
+/* Buttons */
+button {
+  border-radius: 6px;
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--accent-color);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.25s, box-shadow 0.25s;
+}
+button:hover {
+  background-color: var(--accent-hover);
+  box-shadow: 0 2px 4px var(--shadow);
+}
+button:focus,
+button:focus-visible {
+  outline: 3px solid #b2f5ea;
+  outline-offset: 2px;
+}
+
+/* Cards or containers */
+.card {
+  background-color: var(--card-bg);
+  border-radius: 6px;
+  padding: 1rem;
+  box-shadow: 0 1px 3px var(--shadow);
+}
+
+/* Secondary text */
+.secondary-text {
+  color: var(--secondary-text);
+}
+
+/* Loading message */
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+
+  padding: 2rem;
+}
+
+/* Dark mode (optional) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    color: #ecf0f1;
+    background-color: #2f2f2f;
+
+    --card-bg: #3a3a3a;
+    --shadow: rgba(0, 0, 0, 0.2);
+  }
+
+  body {
+    background-color: #2f2f2f;
+  }
+
+  h1 {
+    color: #ecf0f1;
+  }
+
+  a {
+    color: #81e6d9;
+  }
+  a:hover {
+    color: #4fd1c5;
+  }
+
+  button {
+    background-color: var(--accent-color);
+  }
+  button:hover {
+    background-color: var(--accent-hover);
+  }
+}
