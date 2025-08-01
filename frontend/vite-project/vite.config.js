@@ -7,7 +7,10 @@ export default defineConfig({
   preview: {
     host: true, // Listen on 0.0.0.0 (not just localhost)
     port: process.env.PORT || 4173, // Railway sets PORT env variable
-    allowedHosts: ['healthcheck.railway.app'] // Allow healthcheck requests
+    allowedHosts: [
+      'healthcheck.railway.app',
+      'web-chat-frontend-only-production.up.railway.app' // <- ADD YOUR DOMAIN HERE
+    ]
   }
   // Uncomment below if you're using HTTPS certs locally
   // server: {
