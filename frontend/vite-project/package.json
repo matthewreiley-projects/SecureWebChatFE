@@ -4,8 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host",
+    "dev": "vite",
     "build": "vite build",
+    "serve": "vite preview",
+    "start": "vite preview --port $PORT",
     "lint": "eslint .",
     "preview": "vite preview"
   },
