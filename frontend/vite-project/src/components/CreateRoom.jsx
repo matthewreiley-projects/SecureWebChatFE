@@ -16,8 +16,8 @@ export default function CreateRoom() {
 
     try {
       await axios.post(
-        import.meta.env.VITE_API_URL
-        ? `${import.meta.env.VITE_API_URL}/api/rooms`
+        import.meta.env.VITE_API_BASE_URL
+        ? `${import.meta.env.VITE_API_BASE_URL}/api/rooms`
         : "https://192.168.86.22:3000/api/rooms",
         {
           name,

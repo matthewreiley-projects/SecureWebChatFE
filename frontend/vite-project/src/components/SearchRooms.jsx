@@ -3,7 +3,7 @@ import axios from "axios";
 import "./SearchRooms.css";
 
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || "https://192.168.86.22:3000";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "https://192.168.86.22:3000";
 
 export default function SearchRooms() {
   const [rooms, setRooms] = useState([]);

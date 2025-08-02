@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./UserInvites.css";
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || "https://192.168.86.22:3000";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "https://192.168.86.22:3000";
 
 export default function InvitesPage() {
   const [roomInvites, setRoomInvites] = useState([]);

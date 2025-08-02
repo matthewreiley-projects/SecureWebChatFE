@@ -5,7 +5,7 @@ import axios from "axios";
 import "./RoomChat.css";
 
 // Use environment variable with fallback
-const API_BASE_URL = import.meta.env.VITE_API_URL || "https://192.168.86.22:3000";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "https://192.168.86.22:3000";
 
 export default function RoomChat() {
   const { id, roomName } = useParams();

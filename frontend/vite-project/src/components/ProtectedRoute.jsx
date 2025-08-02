@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 import axios from "axios";
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || "https://192.168.86.22:3000";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "https://192.168.86.22:3000";
 
 export default function ProtectedRoute({ children }) {
   const [loading, setLoading] = useState(true);
