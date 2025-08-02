@@ -9,7 +9,7 @@ export default defineConfig({
     port: process.env.PORT || 4173, // Railway sets PORT env variable
     allowedHosts: [
       'healthcheck.railway.app',
-      'https://web-chat-frontend-only-production.up.railway.app' // <- ADD YOUR DOMAIN HERE
+      'web-chat-frontend-only-production.up.railway.app' // <- ADD YOUR DOMAIN HERE
     ]
   }
   // Uncomment below if you're using HTTPS certs locally
