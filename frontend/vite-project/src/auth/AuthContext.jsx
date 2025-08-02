@@ -5,7 +5,6 @@ const AuthContext = createContext();
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "https://192.168.86.22:3000";
 
-
 export function AuthProvider({ children }) {
   const [isAuthenticated, setIsAuthenticated] = useState(null); // null = loading
   const [user, setUser] = useState(null);
