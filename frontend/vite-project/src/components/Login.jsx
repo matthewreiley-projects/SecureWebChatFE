@@ -122,6 +122,7 @@ export default function Login() {
       }
 
       // Login request
+      console.log("getting answer")
       const answer = await axios.post(
         `${API_BASE_URL}/api/auth/login`,
         { address: account, signature, publicKey: publicEncryptionKey },
