@@ -122,11 +122,13 @@ export default function Login() {
       }
 
       // Login request
-      await axios.post(
+      const answer = await axios.post(
         `${API_BASE_URL}/api/auth/login`,
         { address: account, signature, publicKey: publicEncryptionKey },
         { withCredentials: true }
       );
+
+      console.log(answer)
 
       window.location.href = "/";
     } catch (err) {
