@@ -142,7 +142,7 @@ export default function RoomChat() {
           const key = keysMap.get(m.keyVersion);
           const content = key
             ? await tryDecrypt(m.content, m.iv, key)
-            : `[Unknown key version: ${m.keyVersion}]`;
+            : `[Unable to Decrypt]`;
           return { ...m, content };
         })
       );
