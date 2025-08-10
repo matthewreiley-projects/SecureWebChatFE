@@ -37,7 +37,7 @@ export default function Dashboard() {
   }, [navigate]);
 
   const leaveRoom = async (roomId) => {
-    await axios.delete(`${API_BASE_URL}/api/rooms/${roomId}/leave`, {
+    await axios.delete(`${API_BASE_URL}/api/rooms/${roomId}/user/leave`, {
       withCredentials: true,
     });
     setRooms(rooms.filter((r) => r.room?._id !== roomId));
