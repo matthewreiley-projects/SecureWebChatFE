@@ -1,18 +1,28 @@
 # SecureChat Frontend
 
-This repository contains the frontend for **SecureChat**, a real-time chat application with end-to-end encryption. The frontend is built with Vite, React, React Router, and integrates Web Crypto API for client-side encryption, along with Axios and Socket.IO for communication with the backend.
+Real-time, end-to-end encrypted chat built for secure collaboration. This frontend showcases practical cryptography, wallet-based auth, and real-time UX in a production-style React app.
+
+**Why it stands out (for hiring managers):**
+- **Security-first design**: client-side RSA-OAEP + AES-GCM using Web Crypto API.
+- **Web3 auth**: wallet-based login via Ethereum signatures (MetaMask).
+- **Real-time UX**: Socket.IO messaging with key rotation support.
+- **Production structure**: protected routing, modular components, env-driven config.
+- **Clear encryption flow**: documented and implemented end-to-end.
 
 ---
 
 ## Table of Contents
 
 * [Features](#features)
+* [Tech Stack](#tech-stack)
+* [Architecture Snapshot](#architecture-snapshot)
 * [Prerequisites](#prerequisites)
 * [Installation](#installation)
 * [Environment Variables](#environment-variables)
 * [Development](#development)
 * [Production Build](#production-build)
 * [Project Structure](#project-structure)
+* [What I'd Highlight in an Interview](#what-id-highlight-in-an-interview)
 * [Key Components](#key-components)
 * [Encryption Flow](#encryption-flow)
 * [License](#license)
@@ -27,6 +37,25 @@ This repository contains the frontend for **SecureChat**, a real-time chat appli
 * **Real-Time Messaging** with Socket.IO.
 * **Responsive UI** built with React and CSS modules.
 * **Protected Routes** using React Router and a custom `ProtectedRoute` component.
+
+---
+
+## Tech Stack
+
+* React + Vite
+* React Router
+* Web Crypto API (RSA-OAEP, AES-GCM)
+* Socket.IO
+* Axios
+* CSS Modules
+
+---
+
+## Architecture Snapshot
+
+* **Auth flow**: wallet signature -> JWT cookie -> protected routes.
+* **Key management**: RSA keys stored locally (JWK), AES keys encrypted per room.
+* **Messaging**: AES-GCM encrypt/decrypt in browser, Socket.IO for live updates.
 
 ---
 
@@ -107,26 +136,35 @@ yarn preview
 
 ```
 frontend/
-├─ public/                # Static assets (logo, index.html)
-├─ src/
-│  ├─ App.js              # Routes & layout (Navbar, ProtectedRoute)
-│  ├─ auth/               # Auth context & hooks
-│  ├─ components/         # React components
-│  │   ├─ Login.jsx
-│  │   ├─ RoomChat.jsx
-│  │   ├─ ManageRoom.jsx
-│  │   ├─ CreateRoom.jsx
-│  │   ├─ EditRoom.jsx
-│  │   ├─ InvitePage.jsx
-│  │   ├─ SearchRooms.jsx
-│  │   ├─ UserInvites.jsx
-│  │   └─ FriendsPage.jsx
-│  ├─ css/                # Component-specific CSS files
-│  ├─ auth/               # Authentication context/provider
-│  └─ index.jsx           # Vite entry point
-├─ .env                   # Environment variables
-└─ vite.config.js         # Vite configuration
+public/                # Static assets (logo, index.html)
+src/
+  App.js               # Routes & layout (Navbar, ProtectedRoute)
+  auth/                # Auth context & hooks
+  components/          # React components
+    Login.jsx
+    RoomChat.jsx
+    ManageRoom.jsx
+    CreateRoom.jsx
+    EditRoom.jsx
+    InvitePage.jsx
+    SearchRooms.jsx
+    UserInvites.jsx
+    FriendsPage.jsx
+  css/                 # Component-specific CSS files
+  auth/                # Authentication context/provider
+  index.jsx            # Vite entry point
+.env                   # Environment variables
+vite.config.js         # Vite configuration
 ```
+
+---
+
+## What I'd Highlight in an Interview
+
+* Built end-to-end encryption entirely in the browser with key rotation handling.
+* Integrated wallet-based authentication for passwordless login.
+* Designed a scalable, component-based React UI for secure collaboration.
+* Coordinated real-time data streams with consistent state updates.
 
 ---
 
@@ -176,3 +214,7 @@ frontend/
 8. **Key Rotation**: Handle `roomKeyUpdated` to import new AES keys.
 
 ---
+
+## License
+
+Not specified.
